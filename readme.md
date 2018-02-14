@@ -22,7 +22,7 @@ Banners include a working, properly formatted tracking link based on your OneLin
 
 
 # Installation
-AppsFlyer recommends using the minified .js.min and .css.min versions of the banner generator.
+AppsFlyer recommends using the minified .min.js and .min.css versions of the banner generator.
 
 ### Required files
 * appsflyer-banner.js.min
@@ -32,8 +32,8 @@ AppsFlyer recommends using the minified .js.min and .css.min versions of the ban
 # Usage
 In your webpage HTML file, include the following inside the `<head>` element:
 ```html
-<script type="text/javascript" src="appsflyer-banner.js.min"></script>
-<link rel="stylesheet" href="appsflyer-banner.css.min">
+<script type="text/javascript" src="appsflyer-banner.min.js"></script>
+<link rel="stylesheet" href="appsflyer-banner.min.css">
 ```
 
 ### Creating your banner
