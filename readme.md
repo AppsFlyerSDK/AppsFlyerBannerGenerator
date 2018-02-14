@@ -25,8 +25,8 @@ Banners include a working, properly formatted tracking link based on your OneLin
 AppsFlyer recommends using the minified .min.js and .min.css versions of the banner generator.
 
 ### Required files
-* appsflyer-banner.js.min
-* appsflyer-banner.css.min
+* appsflyer-banner.min.js
+* appsflyer-banner.min.css
 
 
 # Usage
