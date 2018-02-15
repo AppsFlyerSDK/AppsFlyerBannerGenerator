@@ -13,6 +13,8 @@ Web-to-App Banner Generator for converting your mobile web users into app instal
     - [Banner Settings](#banner-settings)
     - [Attribution Parameters](#attribution-parameters)
     - [Deep Linking Parameters](#deep-linking-parameters)
+- [Troubleshooting](#troubleshooting)
+- [Support](#support)
 - [License](#license)
 
 # Introduction
