@@ -45,7 +45,9 @@ In your webpage HTML file, include the following inside the `<head>` element:
 ### Creating your banner
 The following easy steps should be followed in order to create your banner:
 
-1. Create a banner container element in your HTML file that will contain the banner, e.g.:
+1. Setup a **OneLink Configuration** for your apps in the AppsFlyer Dashboard. For more information about how to setup OneLink see our [OneLink Help Center article](https://support.appsflyer.com/hc/en-us/articles/207032246-OneLink-Basic-Setup-Guide).
+
+2. Create a banner container element in your HTML file that will contain the banner, e.g.:
 ```html
 <body>
     <div id="my-banner"></div>
@@ -53,12 +55,12 @@ The following easy steps should be followed in order to create your banner:
 </body>
 ```
 
-2. Create an AppsFlyer banner object, using:
+3. Create an AppsFlyer banner object, using:
 ```js
 var banner = new AFBanner();
 ```
 
-3. Create a settings JSON object, which includes the banner general settings , attribution parameters and deep link parameters (see [Available Parameters](#available-parameters)). Example settings object:
+4. Create a settings JSON object, which includes the banner general settings , attribution parameters and deep link parameters (see [Available Parameters](#available-parameters)). Example settings object:
 ```js
 var settings = {
     // banner settings
@@ -83,7 +85,7 @@ var settings = {
 };
 ```
 
-4. Initialize the banner using the `init` function, and passing both container ID and banner settings object.
+5. Initialize the banner using the `init` function, and passing both container ID and banner settings object.
 ```js
 banner.init("my-banner", settings);
 ``` 
@@ -137,4 +139,4 @@ For any questions or help reach out to us at [support@appsflyer.com](support@app
 
 
 # License
-MIT Licensed. Copyright (c) AppsFlyer 2018.
+MIT Licensed. Copyright (c) 2018 AppsFlyer, [http://www.appsflyer.com](http://www.appsflyer.com)
