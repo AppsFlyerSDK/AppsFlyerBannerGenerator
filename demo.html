@@ -1,13 +1,12 @@
 <html>
     <head>
-        <script type="text/javascript" src="appsflyer-banner.js"></script>
-        <link rel="stylesheet" href="appsflyer-banner.css">
+        <script type="text/javascript" src="appsflyer-banner.min.js"></script>
+        <link rel="stylesheet" href="appsflyer-banner.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
 
     <body>
         <div id="my-banner"></div>
-
         <script>
             var settings = {
                 // banner settings
@@ -15,6 +14,7 @@
                 subtitle: "Track campaigns on the go",
                 app_icon: "img/app_icon.png",
                 call_to_action: "Install",
+                show_only_mobile: true,
                 
                 // attribution settings
                 media_source: "banner_pid",
@@ -30,7 +30,6 @@
                 mobile_deeplink: "appsflyer://"                
             };
             
-            // Note - it is recommended to create and initialize the banner only on mobile devices
             var banner = new AFBanner();
             banner.init("my-banner", settings);
 

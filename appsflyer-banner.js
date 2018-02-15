@@ -4,7 +4,8 @@
  */
 
 var CALL_TO_ACTION_TEXT = "Install";
-var DEFAULT_SUB_DOMAIN = "go";
+var DEFAULT_SUBDOMAIN = "go";
+var MOBILE_REGEXP = "/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i"
 
 function AFBanner () {
 
@@ -15,7 +16,7 @@ function AFBanner () {
         }
 
         // URL settings
-        var subdomain = settings.subdomain || DEFAULT_SUB_DOMAIN;
+        var subdomain = settings.subdomain || DEFAULT_SUBDOMAIN;
         var onelinkid = settings.onelink_id;
         var bannerTag = "?is_banner=true";
         var baseUrl = "https://" + subdomain + ".onelink.me/" + onelinkid + bannerTag;
@@ -109,10 +110,19 @@ function AFBanner () {
         return true;
     };
 
+    this.showOnCurrentDevice = function(settings) {
+        
+        if (settings.show_only_mobile) {
+            var userAgent = navigator.userAgent;
+            return userAgent.match(MOBILE_REGEXP);
+        }
+        return true;
+    }
+
     this.init = function(bannerContainerId, settings) {
 
         // validate required input
-        if (this.validateSettings(settings)){
+        if (this.validateSettings(settings) && this.showOnCurrentDevice(settings)){
 
             // get data
             var url = this.buildUrl(settings);        

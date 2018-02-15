@@ -6,6 +6,7 @@
     z-index: 999; 
     -webkit-transition: all 0.25s ease; 
     transition: all 00.25s ease;
+    margin-bottom: 3px;
 }
 
 .appsflyer-banner-close-container {

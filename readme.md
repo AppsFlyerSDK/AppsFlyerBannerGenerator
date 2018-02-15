@@ -16,7 +16,11 @@ Web-to-App Banner Generator for converting your mobile web users into app instal
 - [License](#license)
 
 # Introduction
-The AppsFlyer Web-to-App Banner Generator allows you to easily create a mobile app promotional banner on your webpage. This banner will be displayed to your mobile web users, inviting them to download your mobile app. Using OneLink deferred deep linking, users who click on the link will be send to the right environment for their device. Users who don not have the app installed will first be sent the correct app store for their operating system. When the app is installed, OneLink opens the app to the optimal place, page or state in the app.
+The AppsFlyer Web-to-App Banner Generator allows you to easily create a mobile app promotional banner on your webpage. This banner will be displayed to your mobile web users, inviting them to download your mobile app. Using OneLink deferred deep linking, users who click on the link will be send to the right environment for their device. Users who do not have the app installed will first be sent the correct app store for their operating system. When the app is installed, OneLink opens the app to the optimal place, page or state in the app.
+
+<p align="center">
+  <img src="img/sample.png" width="350"/> 
+</p>
 
 Banners include a working, properly formatted tracking link based on your OneLink settings and a set of user-configured banner configuration.
 
@@ -91,6 +95,7 @@ banner.init("my-banner", settings);
 | subtitle | `String` | (optional) The text that will appear below the title |
 | app_icon | `String` | URL or image file location of the app that you wish to install |
 | call_to_action | `String` | The text that will be displayed in the action button, e.g. `Install` |
+| show_only_mobile | `Boolean` | if set to `true`, the banner will only be shown only on mobile devices. Default is `false`  |
 
 
 ### Attribution Parameters
