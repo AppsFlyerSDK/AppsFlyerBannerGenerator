@@ -118,8 +118,21 @@ banner.init("my-banner", settings);
 | mobile_deeplink | `String` | Mobile deep link URL (`af_dp`) |
 
 
+# Troubleshooting
+*My banner isn't showing*
+* Make sure that all mandatory parameters have been provided
+* If you are on desktop check that `show_only_mobile` is set to `false`
+
+*My banner link is broken*
+* The OneLink subdomain must be the same subdomain defined in the provided OneLink ID's configuration.  Any mismatch between the subdomain and OneLink ID will result in a broken link.
+
+*The banner is showing on desktop*
+* Use the `show_only_mobile` parameter to display the banner only on mobile devices.
+
+
 # Support
 For any questions or help reach out to us at [support@appsflyer.com](support@appsflyer.com).
+
 
 # License
 MIT Licensed. Copyright (c) AppsFlyer 2018.
