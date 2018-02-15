@@ -64,6 +64,7 @@ var settings = {
     subtitle: "Track campaigns on the go",
     app_icon: "img/app_icon.png",
     call_to_action: "Install",
+    show_only_mobile: true,
     
     // attribution settings
     media_source: "banner_pid",
@@ -95,7 +96,7 @@ banner.init("my-banner", settings);
 | subtitle | `String` | (optional) The text that will appear below the title |
 | app_icon | `String` | URL or image file location of the app that you wish to install |
 | call_to_action | `String` | The text that will be displayed in the action button, e.g. `Install` |
-| show_only_mobile | `Boolean` | if set to `true`, the banner will only be shown only on mobile devices. Default is `false`  |
+| show_only_mobile | `Boolean` | if set to `true`, the banner will only be shown only on mobile devices |
 
 
 ### Attribution Parameters
