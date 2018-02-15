@@ -45,7 +45,7 @@ In your webpage HTML file, include the following inside the `<head>` element:
 ### Creating your banner
 The following easy steps should be followed in order to create your banner:
 
-1. Setup a **OneLink Configuration** for your apps in the AppsFlyer Dashboard. For more information about how to setup OneLink see our [OneLink Help Center article](https://support.appsflyer.com/hc/en-us/articles/207032246-OneLink-Basic-Setup-Guide).
+1. Setup a **OneLink Configuration** for your apps in the AppsFlyer Dashboard. For more information about how to setup OneLink see our <a href="https://support.appsflyer.com/hc/en-us/articles/207032246-OneLink-Basic-Setup-Guide" target="_blank">OneLink Help Center article</a>.
 
 2. Create a banner container element in your HTML file that will contain the banner, e.g.:
 ```html
@@ -118,7 +118,7 @@ banner.init("my-banner", settings);
 | Parameter | Type | Description |
 |:---|:---|:---|
 | onelink_id <span style="color:#009fdf">**(required)**</span>| `String` | OneLink Configuration ID |
-| subdomain | `String` | Your sub-domain |
+| subdomain | `String` | Your OneLink ID's sub-domain |
 | mobile_deeplink | `String` | Mobile deep link URL (`af_dp`) |
 
 
@@ -139,4 +139,4 @@ For any questions or help reach out to us at [support@appsflyer.com](support@app
 
 
 # License
-MIT Licensed. Copyright (c) 2018 AppsFlyer, [http://www.appsflyer.com](http://www.appsflyer.com)
+MIT Licensed. Copyright (c) 2018 AppsFlyer, <a href="http://www.appsflyer.com" target="_blank">http://www.appsflyer.com</a>
