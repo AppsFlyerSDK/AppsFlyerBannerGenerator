@@ -3,7 +3,7 @@ AppsFlyer Web App Banner Generator
 
 Web-to-App Banner Generator for converting your mobile web users into app installs. Powered by OneLink.
 
-# Table of Content
+# Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
     - [Required files](#required-files)
