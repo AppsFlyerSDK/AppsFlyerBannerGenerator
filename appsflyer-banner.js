@@ -4,6 +4,7 @@
  */
 
 var CALL_TO_ACTION_TEXT = "Install";
+var DEFAULT_SUB_DOMAIN = "go";
 
 function AFBanner () {
 
@@ -14,7 +15,7 @@ function AFBanner () {
         }
 
         // URL settings
-        var subdomain = settings.subdomain;
+        var subdomain = settings.subdomain || DEFAULT_SUB_DOMAIN;
         var onelinkid = settings.onelink_id;
         var bannerTag = "?is_banner=true";
         var baseUrl = "https://" + subdomain + ".onelink.me/" + onelinkid + bannerTag;
@@ -92,19 +93,40 @@ function AFBanner () {
         return bannerContainer;
     };
 
-    this.init = function(bannerContainerId, settings) {
-        // get data
-        var url = this.buildUrl(settings);
-        var banner = this.buildBanner(bannerContainerId, url, settings);
+    this.validateSettings = function(settings) {
         
-        // inject to banner container element
-        var div = document.getElementById(bannerContainerId);
-        div.appendChild(banner);
+        var missingSettings = []
+        if (!settings.onelink_id) {
+            missingSettings.push("OneLink ID");
+        }
+        if (!settings.media_source) {
+            missingSettings.push("Media Source");
+        }
+        if (missingSettings.length > 0) {
+            console.error("Error: Your AppsFlyer Banner settings object does not contain: " + missingSettings.join(", "));
+            return false;
+        }
+        return true;
+    };
 
-        // required for handheld devices
-        var metaTag = document.createElement('meta');
-        metaTag.name = "viewport";
-        metaTag.content = "width=device-width, initial-scale=1.0";
-        document.getElementsByTagName('head')[0].appendChild(metaTag);
+    this.init = function(bannerContainerId, settings) {
+
+        // validate required input
+        if (this.validateSettings(settings)){
+
+            // get data
+            var url = this.buildUrl(settings);        
+            var banner = this.buildBanner(bannerContainerId, url, settings);
+
+            // inject to banner container element
+            var div = document.getElementById(bannerContainerId);
+            div.appendChild(banner);
+
+            // required for handheld devices
+            var metaTag = document.createElement('meta');
+            metaTag.name = "viewport";
+            metaTag.content = "width=device-width, initial-scale=1.0";
+            document.getElementsByTagName('head')[0].appendChild(metaTag);
+        }
     };
 }

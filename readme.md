@@ -96,7 +96,7 @@ banner.init("my-banner", settings);
 ### Attribution Parameters
 | Parameter | Type | Description |
 |:---|:---|:---|
-| media_source | `String` | Media Source (`pid`) |
+| media_source <span style="color:#009fdf">**(required)**</span> | `String` | Media Source (`pid`)|
 | campaign | `String` | Campaign |
 | ad | `String` | Ad |
 | ad_id | `String` | Ad ID |
@@ -107,10 +107,13 @@ banner.init("my-banner", settings);
 ### Deep Link Parameters
 | Parameter | Type | Description |
 |:---|:---|:---|
-| onelink_id | `String` | OneLink Configuration ID |
+| onelink_id <span style="color:#009fdf">**(required)**</span>| `String` | OneLink Configuration ID |
 | subdomain | `String` | Your sub-domain |
 | mobile_deeplink | `String` | Mobile deep link URL (`af_dp`) |
 
+
+# Support
+For any questions or help reach out to us at [support@appsflyer.com](support@appsflyer.com).
 
 # License
 MIT Licensed. Copyright (c) AppsFlyer 2018.
