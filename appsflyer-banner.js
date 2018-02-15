@@ -18,7 +18,7 @@ function AFBanner () {
         // URL settings
         var subdomain = settings.subdomain || DEFAULT_SUBDOMAIN;
         var onelinkid = settings.onelink_id;
-        var bannerTag = "?is_banner=true";
+        var bannerTag = "?af_banner=true";
         var baseUrl = "https://" + subdomain + ".onelink.me/" + onelinkid + bannerTag;
         
         // Attribution Settings
