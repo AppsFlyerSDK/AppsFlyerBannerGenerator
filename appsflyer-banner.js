@@ -46,7 +46,7 @@ function AFBanner () {
         closeImg.setAttribute('class', 'appsflyer-banner-close-img');
         closeImg.setAttribute('src', 'img/close.png');
 
-        var closeFn = "var bannerWrapper = document.getElementById('" + bannerContainerId + "'); while (bannerWrapper.firstChild) {bannerWrapper.removeChild(div.firstChild);}";
+        var closeFn = "var bannerWrapper = document.getElementById('" + bannerContainerId + "'); while (bannerWrapper.firstChild) {bannerWrapper.removeChild(bannerWrapper.firstChild);}";
         var closeImgContainer = document.createElement("DIV");
         closeImgContainer.setAttribute('class', 'appsflyer-banner-close-container');
         closeImgContainer.setAttribute('onclick', closeFn);
