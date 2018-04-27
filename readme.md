@@ -73,6 +73,8 @@ var settings = {
     // attribution settings
     media_source: "banner_pid",
     campaign: "banner_c",
+    adset: "banner_adset",
+    adset_id: "banner_adset_id",
     ad: "banner_ad",
     ad_id: "banner_ad_id",
     site_id: "banner_site_id",
@@ -108,6 +110,8 @@ banner.init("my-banner", settings);
 |:---|:---|:---|
 | media_source <span style="color:#009fdf">**(required)**</span> | `String` | Media Source (`pid`)|
 | campaign | `String` | Campaign |
+| adset | `String` | Adset |
+| adset_id | `String` | Adset ID |
 | ad | `String` | Ad |
 | ad_id | `String` | Ad ID |
 | site_id | `String` | Site ID |

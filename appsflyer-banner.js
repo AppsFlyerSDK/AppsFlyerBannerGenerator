@@ -23,7 +23,9 @@ function AFBanner () {
         
         // Attribution Settings
         var media_source = getParam("pid", settings.media_source);
-        var campaign = getParam("c", settings.campaign);       
+        var campaign = getParam("c", settings.campaign);
+        var adset = getParam("af_adset", settings.adset);
+        var adset_id = getParam("af_adset_id", settings.adset_id);       
         var ad = getParam("af_ad", settings.ad);
         var ad_id = getParam("af_ad_id", settings.ad_id);
         var site_id = getParam("af_siteid", settings.site_id);
@@ -33,7 +35,7 @@ function AFBanner () {
         var af_dp = getParam("af_dp", settings.mobile_deeplink);       
     
         // Build URL
-        var url = baseUrl + media_source + campaign + 
+        var url = baseUrl + media_source + campaign + adset + adset_id +
                   ad + ad_id + site_id + sub1 + af_dp;
         
         return url;
